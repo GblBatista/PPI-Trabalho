@@ -1,0 +1,105 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+.bg-food{
+    background-image: url('../imagens/padrao.jpg'); /* URL da sua imagem */
+    background-size: cover; /* Ajusta o tamanho da imagem para cobrir o body */
+    background-position: center; /* Centraliza a imagem no body */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+}
+
+.form-group label {
+    position: absolute;
+    top: -8px;
+    left: 15px;
+    background-color: white;
+    padding: 0 5px;
+}
+
+.navbar-custom {
+    background-color: #429dff; /* Cor de fundo azul */
+    color: white; /* Cor do texto branco */
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Estilos para o SVG */
+.svg-background {
+    position: absolute;
+    margin-top: 0%;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    pointer-events: none; /* Para que o SVG não interfira com eventos de clique */
+}
+
+.total-btn{
+    width: 100%;
+}
+
+footer{
+    background-color: #0056b3;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.separator {
+    border-top: 1px solid #bebebe; /* Cor e espessura da linha */
+    margin: 20px 0; /* Espaçamento acima e abaixo da linha */
+    color: #a09f9f;
+    font-size: 15px;
+    text-align: center;
+    height: 1px; /* Altura da linha (pode ser ajustada) */
+}
+
+
+.login-box{
+    width: 40%;
+    margin: auto;
+    background-color: white;
+    padding: 2%;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-box p{
+    color: #a09f9f;
+}
+
+.form-box{
+    width: 100%;
+    margin: auto;
+    background-color: white;
+    padding: 2%;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para o conteúdo da página */
+.content {
+    position: relative;
+    flex-grow: 1;
+    z-index: 1; /* Coloca o conteúdo acima do SVG */
+    background-color: transparent; /* Define uma cor de fundo para o conteúdo, se desejado */
+    padding: 20px; /* Espaçamento para o conteúdo */
+}
+
+
+.navbar-custom .navbar-nav .nav-link {
+    color: white; /* Cor do texto branco */
+    text-decoration: none !important; /* Remova sublinhado */
+    transition: color 0.3s; /* Transição de cor ao passar o mouse */
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+    color: #0056b3; /* Cor mais escura ao passar o mouse */
+}
