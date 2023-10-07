@@ -9,8 +9,9 @@
     <!-- Estilos CSS personalizados (opcional) -->
     <!-- Estilos CSS personalizados (opcional) -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cadastro.css">
 </head>
-<body class="bg-food">
+<body>
     <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container-fluid">
             <!-- Logo à direita -->
@@ -67,20 +68,35 @@
                 <input type="password" class="form-control" id="password" name="password"b placeholder="Senha" required>
                 <label for="password">Senha</label>
             </div>
-            <div class="mb-2">
-                <label for="select">Quem é você?</label>
+            <div class="form-floating mb-2">
+                <label for="select"  id="lb-select">Quem é você? Selecione o tipo de conta...</label>
                 <select class="form-select" id="select" aria-label="Tipo de Conta" required>
-                    <option selected value="" aria-placeholder="Selecione o tipo de conta...">Selecione o tipo de conta...</option>
+                    <option selected value="" aria-placeholder="Selecione o tipo de conta..."></option>
                     <option value="Fornecedor">Fornecedor</option>
                     <option value="ONG">ONG (Organização Não-Governamental)</option>
                 </select>
+            </div>
+            <div class="row  mb-2">
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input type="tel" class="form-control" id="tel" name="tel" placeholder="Telefone" required>
+                        <label for="tel" id="lb-tel">Telefone</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="site" name="site" placeholder="Site">
+                        <label for="site" id="lb-site">Site da Instituição (opcional)</label>
+                    </div>
+                </div>
             </div>
             <!-- Outros campos de cadastro -->
             <button type="submit" class="btn btn-primary">Cadastrar</button>
         </form>
     </div>
-    <footer class="p-2 text-center text-white">
-        <p>Desenvolvido por Gabriel Batista e Dalmo Scalon - Universidade Federal de Uberlândia</p>
-    </footer>
+    <script src="js/cadastro.js"></script>
 </body>
+<footer class="p-2 text-center text-white">
+    <p>Desenvolvido por Gabriel Batista e Dalmo Scalon - Universidade Federal de Uberlândia</p>
+</footer>
 </html>
