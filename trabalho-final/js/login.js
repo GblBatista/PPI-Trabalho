@@ -17,8 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
         } else if (passwordValue === "") {
             alert("Por favor, preencha o campo de Senha.");
         } else {
-            // Faça aqui o que quiser com os valores do email e senha
-            // Por exemplo, você pode enviar os dados para o servidor ou realizar outras ações.
             console.log("Email:", emailValue);
             console.log("Senha:", passwordValue);
         }
