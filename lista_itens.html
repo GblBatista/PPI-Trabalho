@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SALVAR | Lista de Itens</title>
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- Estilos CSS personalizados (opcional) -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lista.css">
+</head>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <!-- Logo à direita -->
+            <a class="navbar-brand" href="index.html"><img src="imagens/Logo_transp.png" class="img-fluid" width="200"></a>
+
+            <!-- Links à esquerda -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lista_itens.html">Lista de Itens</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cadastro_usuario.html">Cadastro</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<body>
+    <div class="svg-background">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1920 1080">
+            <!-- Parte inferior ondulada -->
+            <path d="M0 0 L0 200 Q 480 350, 960 200 Q 1440 50, 1920 200 L1920 0 Z" fill="url(#grad)" />
+        
+            <!-- Definição do gradiente -->
+            <defs>
+                <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:#429dff;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#0056b3;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
+    <div class="container content mt-5">
+        <h1 class="text-white">Lista de Itens</h1>
+        <div class="input-group mb-5 mt-5">
+            <input type="text" class="form-control ip-group" placeholder="Pesquise ONG ou Fornecedor..." aria-label="Username" aria-describedby="basic-addon1">
+            <span class="input-group-text ip-group" id="basic-addon1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg>
+            </span>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-striped table-bordless mt-3" id="datatable">
+                <thead class="table-dark">
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Telefone</th>
+                    <th scope="col">Site</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Gilberto Costa</td>
+                    <td>Fornecedor</td>
+                    <td>gilXXXXX@mail.com</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Projeto Alimentar Você</td>
+                    <td>ONG</td>
+                    <td>p.alimentarXXXXX@mail.com</td>
+                    <td>(xx) xxxx-xxxx</td>
+                    <td>www.alimentarvc.org</td>
+                </tr>
+                <tr>
+                    <td>Casa da Ajuda</td>
+                    <td>ONG</td>
+                    <td>casaXXXXX@mail.com</td>
+                    <td>(yy) yyyy-yyyy</td>
+                    <td>www.ajuda.org</td>
+                </tr>
+                <tr>
+                    <td>Maria Silva</td>
+                    <td>Fornecedor</td>
+                    <td>mariaXXXXX@mail.com</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+    </div>
+    <script src="js/lista.js"></script>
+</body>
+<footer class="p-2 text-center text-white">
+    <p>Desenvolvido por Gabriel Batista e Dalmo Scalon - Universidade Federal de Uberlândia</p>
+</footer>
+</html>
