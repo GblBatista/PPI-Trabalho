@@ -55,35 +55,99 @@
             </defs>
         </svg>
     </div> 
-    <div id="carouselExampleFade" class="carousel slide carousel-fade">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <a href="https://brasil.un.org/pt-br/sdgs"><img src="imagens/fome_zero.PNG" class="d-block w-100" alt="..."></a> 
-        </div>
-        <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="...">
+     
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Carrossel (lado esquerdo) -->
+            <div class="col-lg-6 h-100">
+                <div id="carousel" class="carousel slide carousel-fade mt-5">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <a href="https://brasil.un.org/pt-br/sdgs/2" target="_blank">
+                            <img src="imagens/Fome_zero.jpeg" class="d-block w-100 rounded" alt="...">
+                        </a>
+                      </div>
+                      <div class="carousel-item">
+                        <a href="https://brasil.un.org/pt-br/sdgs" target="_blank">
+                            <img src="imagens/agenda.jpeg" class="d-block w-100 rounded" alt="...">
+                        </a>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
+            <!-- Texto: Visão Geral (lado direito) -->
+            <div class="col-lg-6 p-style mt-5">
+                <h4>Sistema de Apoio a Luta contra Vulnerabilidade Alimentar e Recursos
+                </h4>
+                <p class="mt-4">
+                    O SALVAR é uma plataforma dedicada a promover a união entre Organizações Não Governamentais (ONGs) que necessitam de recursos alimentares e fornecedores de alimentos dispostos a doar. Esses fornecedores podem ser empresas, instituições ou qualquer pessoa que deseje contribuir com recursos alimentares para aqueles que mais precisam.
+                </p>
+            </div>
         </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-    </div>   
-    <div class="container">
-        <h1 class="text-center">Bem-vindo ao SALVAR</h1>
-        <p class="text-center text-black">Sistema de Apoio à Luta contra Vulnerabilidade Alimentar e Recursos</p>
 
-        <h2>Visão Geral</h2>
-        <p class="text-black">O SALVAR é uma plataforma dedicada a promover a união entre Organizações Não Governamentais (ONGs) que necessitam de recursos alimentares e fornecedores de alimentos dispostos a doar. Esses fornecedores podem ser empresas, instituições ou qualquer pessoa que deseje contribuir com recursos alimentares para aqueles que mais precisam.</p>
+    <!-- Segunda sessão: Nossa Motivação e SVG -->
+    <div class=" mt-5" id="motiv">
+        <div class="container">
+            <div class="row">
+                <!-- Texto: Nossa Motivação (lado esquerdo) -->
+                <div class="col-lg-7">
+                    <h2 class="text-white mt-4">Nossa Motivação</h2>
+                    <p class="text-white mt-5">
+                        O tema central do SALVAR está alinhado com o Objetivo de Desenvolvimento Sustentável (ODS) número dois, que é "Fome Zero e Agricultura Sustentável". A plataforma foi desenvolvida com o objetivo de contribuir para a erradicação da fome, garantindo o acesso de todas as pessoas, especialmente as mais pobres e vulneráveis, incluindo crianças, a alimentos seguros, nutritivos e suficientes durante todo o ano.
+                    </p>
+                    <p class="text-white mb-4">
+                        Com a implementação do SALVAR, facilitamos o contato entre as ONGs que lutam contra a vulnerabilidade alimentar e os doadores de alimentos. Essa colaboração é fundamental para alcançar o ODS de Fome Zero, trabalhando juntos para garantir que ninguém passe fome em nossa comunidade e no mundo.
+                    </p>
+                </div>
+                <!-- SVG (lado direito) -->
+                <div class="col-lg-5 mb-4 mt-4">
+                    <img src="imagens/plate.png" class="img-fluid" alt="">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <h2>Relação do Tema com os Objetivos de Desenvolvimento Sustentável (ODS)</h2>
-        <p class="text-black">O tema central do SALVAR está alinhado com o Objetivo de Desenvolvimento Sustentável (ODS) número dois, que é "Fome Zero e Agricultura Sustentável". A plataforma foi desenvolvida com o objetivo de contribuir para a erradicação da fome, garantindo o acesso de todas as pessoas, especialmente as mais pobres e vulneráveis, incluindo crianças, a alimentos seguros, nutritivos e suficientes durante todo o ano.</p>
-
-        <p class="text-black">Com a implementação do SALVAR, facilitamos o contato entre as ONGs que lutam contra a vulnerabilidade alimentar e os doadores de alimentos. Essa colaboração é fundamental para alcançar o ODS de Fome Zero, trabalhando juntos para garantir que ninguém passe fome em nossa comunidade e no mundo.</p>
+    <!-- Terceira sessão: Cards -->
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card mb-4">
+                    <div class="card-body mb-5">
+                        <h5 class="card-title">Cadastro</h5>
+                        <p class="card-text">Cadastre-se no sistema SALVAR.</p>
+                        <a href="cadastro_usuario.html" class="btn btn-primary">Cadastrar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card mb-4">
+                    <div class="card-body mb-5">
+                        <h5 class="card-title">Listagem</h5>
+                        <p class="card-text">Veja quem já colabora no sistema SALVAR.</p>
+                        <a href="lista_itens.html" class="btn btn-primary">Ver Lista</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card mb-4">
+                    <div class="card-body mb-5">
+                        <h5 class="card-title">Objetivos da ONU</h5>
+                        <p class="card-text">Conheça os 17 Objetivos do Século da ONU.</p>
+                        <a href="https://brasil.un.org/pt-br/sdgs" target="_blank" class="btn btn-primary">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 <footer class="p-2 text-center text-white">

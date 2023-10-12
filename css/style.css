@@ -32,12 +32,12 @@ footer {
     margin-top: 5%;
     bottom: 0;
     width: 100%;
-    position: fixed;
+    position: relative;
     text-align: center;
 }
 
 p {
-    color: #858585;
+    color: black;
     text-align: justify;
 }
 
