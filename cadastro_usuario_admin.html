@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Editar Perfil | SALVAR</title>
+    <title>SALVAR | Cadastro de Usuário</title>
     <!-- Inclua os arquivos CSS e JavaScript do Bootstrap -->
     <meta charset="utf-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- Estilos CSS personalizados (opcional) -->
     <!-- Estilos CSS personalizados (opcional) -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/cadastro.css">
     <link rel="stylesheet" href="css/offCanvas.css">
     <link rel="icon" type="image/x-icon" href="imagens/brand.png">
 
@@ -21,8 +18,7 @@
     <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container-fluid">
             <!-- Logo à direita -->
-            <a class="navbar-brand" href="index.html"><img src="imagens/Logo_transp.png" class="img-fluid"
-                    width="200"></a>
+            <a class="navbar-brand" href="index.html"><img src="imagens/Logo_transp.png" class="img-fluid" width="200"></a>
 
             <!-- Links à esquerda -->
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -55,28 +51,26 @@
 
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
 
         <div class="offcanvas-body">
             <ul>
-                <li><a href="#">Solicitar Postagem</a></li>
-                <li><a href="#">Editar Postagem</a</li>
-                <li><a href="editar_perfil.html">Editar perfil</a></li>
+                <li><a href="#">Validar Postagem</a></li>
                 <li><a href="#">Excluir Perfil</a></li>
+                <li><a href="#">Excluir Postagem</a></li>
             </ul>
         </div>
 
     </div>
 </header>
-
 <body>
     <div class="svg-background">
         <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1920 1080">
             <!-- Parte inferior ondulada -->
             <path d="M0 0 L0 200 Q 480 350, 960 200 Q 1440 50, 1920 200 L1920 0 Z" fill="url(#grad)" />
-
+        
             <!-- Definição do gradiente -->
             <defs>
                 <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -86,42 +80,50 @@
             </defs>
         </svg>
     </div>
-    <div class="container mt-5 flex login-box">
-        <div class="container pb-2 text-center">
-            <img src="imagens/brand.png" width="80" class="img-fluid" alt="">
-            <p class="pt-1 text-center">Edite o seu perfil no sistema SALVAR</p>
-        </div>
-        <form id="profileEditForm">
+    <div class="container content mt-5">
+        <h1 class="text-white">Cadastro de Usuário</h1>
+        <form class="form-box">
             <div class="form-floating mb-2">
-                <input type="text" class="form-control" id="name" placeholder="Nome" value="Nome do Usuário">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Nome" required>
                 <label for="name">Nome</label>
             </div>
             <div class="form-floating mb-2">
-                <input type="email" class="form-control" id="email" placeholder="Email" value="usuario@example.com">
-                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required>
+                <label for="email">E-mail</label>
             </div>
             <div class="form-floating mb-2">
-                <input type="text" class="form-control" id="address" placeholder="Endereço" value="Endereço do Usuário">
-                <label for="address">Endereço</label>
+                <input type="password" class="form-control" id="password" name="password"b placeholder="Senha" required>
+                <label for="password">Senha</label>
             </div>
             <div class="form-floating mb-2">
-                <input type="text" class="form-control" id="address" placeholder="Endereço" value="Telefone do Usuário">
-                <label for="address">Telefone</label>
+                <label for="select"  id="lb-select">Quem é você? Selecione o tipo de conta...</label>
+                <select class="form-select" id="select" aria-label="Tipo de Conta" required>
+                    <option selected value="" aria-placeholder="Selecione o tipo de conta..."></option>
+                    <option value="Fornecedor">Fornecedor</option>
+                    <option value="ONG">ONG (Organização Não-Governamental)</option>
+                </select>
             </div>
-            <div class="mb-3">
-                <label for="profilePicture" class="form-label">Foto de Perfil</label>
-                <input type="file" class="form-control" id="profilePicture" accept="image/*">
+            <div class="row  mb-2">
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input type="tel" class="form-control" id="tel" name="tel" placeholder="Telefone" required>
+                        <label for="tel" id="lb-tel">Telefone</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="site" name="site" placeholder="Site">
+                        <label for="site" id="lb-site">Site da Instituição (opcional)</label>
+                    </div>
+                </div>
             </div>
-            <button type="button" class="btn btn-primary" id="uploadProfilePicture">Trocar Foto de Perfil</button>
-            
-            <button type="submit" class="btn btn-primary mt-3 total-btn">Salvar Alterações</button>
+            <!-- Outros campos de cadastro -->
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
         </form>
     </div>
-    <!-- Código JavaScript -->
-    <script src="js/profileEdit.js"></script>
+    <script src="js/cadastro.js"></script>
 </body>
 <footer class="p-2 text-center text-white">
     <p>Desenvolvido por Gabriel Batista e Dalmo Scalon - Universidade Federal de Uberlândia</p>
 </footer>
-
 </html>
