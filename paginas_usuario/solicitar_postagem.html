@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>SALVAR | Lista de Usuários</title>
+    <title>SALVAR | Sistema de Apoio à Luta contra Vulnerabilidade Alimentar e Recursos</title>
     <meta charset="utf-8">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -11,16 +11,17 @@
         crossorigin="anonymous"></script>
     <!-- Estilos CSS personalizados (opcional) -->
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/solicitarPostagem.css">
     <link rel="stylesheet" href="../css/offCanvas.css">
-    <link rel="stylesheet" href="../css/delete.css">
     <link rel="icon" type="image/x-icon" href="../imagens/brand.png">
+
 </head>
 <header>
     <nav class="navbar navbar-expand-lg navbar-custom navbar-dark">
         <div class="container-fluid">
             <!-- Logo à direita -->
-            <a class="navbar-brand" href="index_admin.html"><img src="../imagens/Logo_transp.png" class="img-fluid"
-                    width="200"></a>
+            <a class="navbar-brand" href="index_usuario.html">
+                <img src="../imagens/Logo_transp.png" class="img-fluid" width="200"></a>
 
             <!-- Links à esquerda -->
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -63,6 +64,7 @@
                 <li><button type="button" class="btn btn-primary" data-bs-toggle="modal"
                         data-bs-target="#confirmExitModal">Sair</button></li>
                 </li>
+
             </ul>
         </div>
 
@@ -84,36 +86,28 @@
             </defs>
         </svg>
     </div>
-    <div class="container mt-5">
-        <h1 class="text-white">Exclusão de Perfil</h1>
-        <span>
-            <img src="../imagens/user.png" class="img-fluid rounded-circle text-center" width="160" height="160" alt="">
-            <h3 class="text-center">Nome do Usuário</h3>
-        </span>
-        <p class="text-center"> Este perfil será excluído permanentemente. Deseja prosseguir com a operação de exclusão.
-        </p>
-        <span class="container"><button class="w-100 btn btn-primary" data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop">Prosseguir</button></span>
-        <!-- Button trigger modal -->
-        <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-            aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Excluir</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        Pedimos que, por favor, confirme ou cancele a exclusão.
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-primary">Excluir</button>
-                    </div>
-                </div>
-            </div>
+
+    <div class="container mt-5 flex solicitarPostagem-box">
+        <div class="container pb-2 text-center">
+            <img src="../imagens/brand.png" width="80" class="img-fluid" alt="">
+            <p class="pt-1 text-center">Solicite sua postagem no sistema SALVAR</p>
         </div>
+        <form id="loginForm">
+            <div class="form-floating mb-2">
+                <input type="text" class="form-control" id="floatingInput" placeholder="Alimento" required>
+                <label for="floatingInput">Alimento (Arroz, feijao, etc..)</label>
+            </div>
+            <div class="form-floating">
+                <input type="text" class="form-control" id="floatingInput" placeholder="Quantidade" required>
+                <label for="floatingInput">Quantidade (kg)</label>
+            </div>
+            <div class="form-floating">
+                <input type="date" class="form-control" id="floatingInput" placeholder="Data de Validade" required>
+                <label for="floatingInput">Data de Validade</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-3 total-btn">Solicitar Postagem</button>
+        </form>
 
         <!-- Modal de confirmação de saída -->
         <div class="modal fade" id="confirmExitModal" tabindex="-1" aria-labelledby="confirmExitModalLabel"
@@ -134,9 +128,9 @@
                 </div>
             </div>
         </div>
-
     </div>
-    <script src="../js/lista_adm.js"></script>
+
+
     <script src="../js/logout.js"></script>
 </body>
 <footer class="p-2 text-center text-white">
