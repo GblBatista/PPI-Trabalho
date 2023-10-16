@@ -21,8 +21,7 @@
     <nav class="navbar navbar-expand-lg navbar-custom navbar-dark">
         <div class="container-fluid">
             <!-- Logo à direita -->
-            <a class="navbar-brand" href="index_admin.html"><img src="../imagens/Logo_transp.png" class="img-fluid"
-                    width="200"></a>
+            <a class="navbar-brand" href="index_admin.html"><img src="../imagens/Logo_transp.png" class="img-fluid" width="200"></a>
 
             <!-- Links à esquerda -->
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -58,13 +57,10 @@
 
         <div class="offcanvas-body">
             <ul>
-                <li><a href="solicitar_postagem.html">Solicitar Postagem</a></li>
+                <li><a href="#">Solicitar Postagem</a></li>
                 <li><a href="#">Gerenciar Postagens</a</li>
                 <li><a href="editar_perfil.html">Editar perfil</a></li>
                 <li><a href="excluir_perfil.html">Excluir Perfil</a></li>
-                <li><button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#confirmExitModal">Sair</button></li>
-                </li>
             </ul>
         </div>
 
@@ -113,33 +109,12 @@
                 <input type="file" class="form-control" id="profilePicture" accept="image/*">
             </div>
             <button type="button" class="btn btn-primary" id="uploadProfilePicture">Trocar Foto de Perfil</button>
-
+            
             <button type="submit" class="btn btn-primary mt-3 total-btn">Salvar Alterações</button>
         </form>
-
-        <!-- Modal de confirmação de saída -->
-        <div class="modal fade" id="confirmExitModal" tabindex="-1" aria-labelledby="confirmExitModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="confirmExitModalLabel">Confirmar Saída</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        Tem certeza de que deseja sair do sistema?
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-primary" id="confirmExitButton">Sair</button>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
     <!-- Código JavaScript -->
     <script src="../js/profileEdit.js"></script>
-    <script src="../js/logout.js"></script>
 </body>
 <footer class="p-2 text-center text-white">
     <p>Desenvolvido por Gabriel Batista e Dalmo Scalon - Universidade Federal de Uberlândia</p>

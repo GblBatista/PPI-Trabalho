@@ -17,15 +17,6 @@
     padding: 20px; /* Espaçamento para o conteúdo */
 }
 
-.separator {
-    border-top: 1px solid #bebebe; /* Cor e espessura da linha */
-    margin: 20px 0; /* Espaçamento acima e abaixo da linha */
-    color: #a09f9f;
-    font-size: 15px;
-    text-align: center;
-    height: 1px; /* Altura da linha (pode ser ajustada) */
-}
-
 .total-btn{
     width: 100%;
 }
