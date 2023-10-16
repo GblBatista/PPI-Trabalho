@@ -20,7 +20,8 @@
     <nav class="navbar navbar-expand-lg navbar-custom navbar-dark">
         <div class="container-fluid">
             <!-- Logo à direita -->
-            <a class="navbar-brand" href="index_admin.html"><img src="../imagens/Logo_transp.png" class="img-fluid" width="200"></a>
+            <a class="navbar-brand" href="index_admin.html"><img src="../imagens/Logo_transp.png" class="img-fluid"
+                    width="200"></a>
 
             <!-- Links à esquerda -->
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -56,10 +57,13 @@
 
         <div class="offcanvas-body">
             <ul>
-                <li><a href="#">Solicitar Postagem</a></li>
+                <li><a href="solicitar_postagem.html">Solicitar Postagem</a></li>
                 <li><a href="#">Gerenciar Postagens</a</li>
                 <li><a href="editar_perfil.html">Editar perfil</a></li>
                 <li><a href="excluir_perfil.html">Excluir Perfil</a></li>
+                <li><button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#confirmExitModal">Sair</button></li>
+                </li>
             </ul>
         </div>
 
@@ -90,7 +94,8 @@
             objetivo unir fornecedores e ONG's com o objetivo de diminuir a fome em um país que a fome é uma
             caracteristica e um grande problema a ser sanado.
         </p>
-        <p class="mb-3 p-style text-justify text-black">O sistema se dá pelo cadastro de fornecedores e ONG's onde o usuario registra no sistema, posta os alimentos
+        <p class="mb-3 p-style text-justify text-black">O sistema se dá pelo cadastro de fornecedores e ONG's onde o
+            usuario registra no sistema, posta os alimentos
             que estão disponiveis para doação e ONG's interessadas podem entrar em contato, ou entao,
             as ONG's postam suas necessidades e o usuario também pode ver a lista de itens das ONG's e entrar em contato
             para fazer a doação. Então o sistema é um facilitador para unir pessoas e organizações que possuem o mesmo
@@ -159,8 +164,27 @@
             </div>
         </div>
 
-        <!-- Conteúdo sobre a equipe desenvolvedora e a disciplina -->
+        <!-- Modal de confirmação de saída -->
+        <div class="modal fade" id="confirmExitModal" tabindex="-1" aria-labelledby="confirmExitModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="confirmExitModalLabel">Confirmar Saída</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Tem certeza de que deseja sair do sistema?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary" id="confirmExitButton">Sair</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <script src="../js/logout.js"></script>
 </body>
 <footer class="p-2 text-center text-white">
     <p>Desenvolvido por Gabriel Batista e Dalmo Scalon - Universidade Federal de Uberlândia</p>
