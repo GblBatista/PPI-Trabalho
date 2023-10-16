@@ -23,3 +23,25 @@ h3{
     background: -o-linear-gradient(left, #429dff, #523172);
     background: linear-gradient(to right, #429dff, #523172);
 }
+
+@media screen AND (min-width: 2300px) {
+    footer {
+        background-color: #0056b3;
+        left: 0;
+        margin-top: 5%;
+        position: fixed; 
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen AND (max-width: 1023px) {
+    .presentation{
+        margin-bottom: 10%;
+    }
+
+    #disc{
+        padding-bottom: 15%;
+    }
+}
