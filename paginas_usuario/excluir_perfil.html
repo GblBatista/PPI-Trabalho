@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>SALVAR | Lista de Usuários</title>
+    <title>SALVAR | Exclusão de Perfi</title>
     <meta charset="utf-8">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -19,7 +19,7 @@
     <nav class="navbar navbar-expand-lg navbar-custom navbar-dark">
         <div class="container-fluid">
             <!-- Logo à direita -->
-            <a class="navbar-brand" href="index_admin.html"><img src="../imagens/Logo_transp.png" class="img-fluid"
+            <a class="navbar-brand" href="index_usuario.html"><img src="../imagens/Logo_transp.png" class="img-fluid"
                     width="200"></a>
 
             <!-- Links à esquerda -->
@@ -60,8 +60,14 @@
                 <li><a href="#">Gerenciar Postagens</a</li>
                 <li><a href="editar_perfil.html">Editar perfil</a></li>
                 <li><a href="excluir_perfil.html">Excluir Perfil</a></li>
-                <li><button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#confirmExitModal">Sair</button></li>
+                <li class="separator">
+                    <button type="button" class="btn btn-outline-primary w-100 mt-3" data-bs-toggle="modal"
+                        data-bs-target="#confirmExitModal">Sair
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+                            <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                          </svg>
+                    </button>
                 </li>
             </ul>
         </div>
@@ -86,34 +92,19 @@
     </div>
     <div class="container mt-5">
         <h1 class="text-white">Exclusão de Perfil</h1>
-        <span>
+        <div class="text-center">
             <img src="../imagens/user.png" class="img-fluid rounded-circle text-center" width="160" height="160" alt="">
-            <h3 class="text-center">Nome do Usuário</h3>
-        </span>
+            <h3 class="text-center mt-4">Nome do Usuário</h3>
+        </div>
         <p class="text-center"> Este perfil será excluído permanentemente. Deseja prosseguir com a operação de exclusão.
         </p>
-        <span class="container"><button class="w-100 btn btn-primary" data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop">Prosseguir</button></span>
+        <div class="prosseguir text-center mt-4">
+            <button class="btn btn-primary w-50" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop">Prosseguir</button>
+        </div>
+        
         <!-- Button trigger modal -->
         <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-            aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Excluir</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        Pedimos que, por favor, confirme ou cancele a exclusão.
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-primary">Excluir</button>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- Modal de confirmação de saída -->
         <div class="modal fade" id="confirmExitModal" tabindex="-1" aria-labelledby="confirmExitModalLabel"
@@ -133,6 +124,42 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Excluir</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Pedimos que, por favor, confirme ou cancele a exclusão.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary"  data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Excluir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="#exampleModalToggle2"aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Exclusão Realizada!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    Sua conta foi excluída com sucesso. Você será redirecionado para a página inicial.
+                    <!--<img src="../imagens/check.png" width="300" alt="" class="img-fluid m-3">-->
+                  </div>
+                  <div class="modal-footer">
+                    <button class="btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="modal">Sair</button>
+                  </div>
+                </div>
         </div>
 
     </div>
