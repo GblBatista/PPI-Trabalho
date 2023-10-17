@@ -1,11 +1,16 @@
 .solicitarPostagem-box{
-    width: 40%;
+    width: 60%;
     margin: auto;
     background-color: white;
     padding: 2%;
     margin-bottom: 13%;
     border-radius: 5px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+legend{
+    font-size: smaller;
+    color: grey;
 }
 
 .content {

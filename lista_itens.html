@@ -3,11 +3,10 @@
 <head>
     <title>SALVAR | Lista de Usuários</title>
     <meta charset="utf-8">
+    <!-- Arquivos CSS e JavaScript do Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <!-- Estilos CSS personalizados (opcional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script><!-- Estilos CSS personalizados -->
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/lista.js"></script>
     <link rel="stylesheet" href="css/lista.css">
     <link rel="icon" type="image/x-icon" href="imagens/brand.png">
 
@@ -15,8 +14,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-custom navbar-dark">
         <div class="container-fluid">
-            <!-- Adicione o botão hamburguer e um título opcional -->
-            <a class="navbar-brand" href="index.html"><img src="imagens/Logo_transp.png" class="img-fluid" width="200"></a>
+            <a class="navbar-brand" href="index.html"><img src="imagens/Logo_transp.png" class="img-fluid" width="200" title="Logo Sistema Salvar" alt=""></a>
 
             <!-- Links à esquerda -->
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -38,6 +36,9 @@
                     </li>
                 </ul>
             </div>
+
+            <!-- Botão Burger -->
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon text-white"></span>
             </button>
@@ -59,8 +60,13 @@
             </defs>
         </svg>
     </div>
-    <div class="container content mt-5">
+
+    <!-- Container Principal -->
+
+    <div class="container content mt-5" id="container">
         <h1 class="text-white">Lista de Usuários</h1>
+
+        <!-- Barra de Pesquisa em tempo real -->
         <div class="input-group mb-5 mt-5">
             <input type="text" class="form-control ip-group" id="search" placeholder="Pesquise ONG ou Fornecedor..." aria-label="Username" aria-describedby="basic-addon1">
             <span class="input-group-text ip-group" id="basic-addon1">
@@ -69,8 +75,12 @@
                 </svg>
             </span>
           </div>
+
+          <!-- Tabela Lista de Usuários -->
+
           <div class="table-responsive">
             <table class="table table-striped table-bordless mt-3" id="table">
+                <caption>Lista de Usuários do Sistema</caption>
                 <thead class="table-dark">
                 <tr>
                     <th scope="col">Foto</th>
@@ -98,8 +108,13 @@
             </table>
           </div>
     </div>
+
+    <!-- Código JavaScript -->
     <script src="js/lista.js"></script>
 </body>
+
+<!-- Footer -->
+
 <footer class="p-2 text-center text-white">
     <p>Desenvolvido por Gabriel Batista e Dalmo Scalon - Universidade Federal de Uberlândia</p>
 </footer>

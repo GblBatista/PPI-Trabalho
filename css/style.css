@@ -15,6 +15,14 @@ body, html {
     font-weight: bold;
 }
 
+.adjust{
+    margin-left: 4%;
+}
+
+.ip-group{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
 .separator {
     border-top: 1px solid #bebebe; /* Cor e espessura da linha */
     margin: 20px 0; /* Espaçamento acima e abaixo da linha */

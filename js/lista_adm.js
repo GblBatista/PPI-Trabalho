@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function filterTable(searchText) {
         const rows = document.querySelectorAll('.accordion-item');
+        let count = parseInt(0);
 
         rows.forEach(function (row) {
             const name = row.querySelector('.name').textContent.toLowerCase();
@@ -15,5 +16,19 @@ document.addEventListener('DOMContentLoaded', function () {
                 row.style.display = 'none';
             }
         });
+
+        rows.forEach(function (row) {
+            if(row.style.display=="block"){
+                count++;
+            }
+        });
+        console.log(count);
+        let footer = document.querySelector('footer');
+
+        if(count==0){
+            footer.style.position = "fixed"
+        }else{
+            footer.style.position = "relative"
+        }
     }
 });
