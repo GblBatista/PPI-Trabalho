@@ -4,20 +4,18 @@
 <head>
     <title>SALVAR | Lista de Usuários</title>
     <meta charset="utf-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <!-- Estilos CSS personalizados (opcional) -->
+    <!-- Arquivos CSS e JavaScript do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- Estilos CSS personalizados -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/offCanvas.css">
+    <link rel="stylesheet" href="../css/lista.css">
     <link rel="icon" type="image/x-icon" href="../imagens/brand.png">
 </head>
 <header>
     <nav class="navbar navbar-expand-lg navbar-custom navbar-dark">
         <div class="container-fluid">
-            <!-- Logo à direita -->
             <a class="navbar-brand" href="index_usuario.html"><img src="../imagens/Logo_transp.png" class="img-fluid"
                     width="200"></a>
 
@@ -49,14 +47,15 @@
 
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+            <img src="../imagens/user.png" class="rounded-circle" width="50" height="50">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Nome do Usuário</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
 
         <div class="offcanvas-body">
             <ul>
                 <li><a href="solicitar_postagem.html">Solicitar Postagem</a></li>
-                <li><a href="#">Gerenciar Postagens</a</li>
+                <li><a href="gerenciar_postagens.html">Gerenciar Postagens</a</li>
                 <li><a href="editar_perfil.html">Editar perfil</a></li>
                 <li><a href="excluir_perfil.html">Excluir Perfil</a></li>
                 <li class="separator">
@@ -90,7 +89,9 @@
             </defs>
         </svg>
     </div>
-    <div class="container mt-5">
+
+
+    <div class="container mt-5" id="container">
         <h1 class="text-white">Lista de Usuários</h1>
         <div class="input-group mb-5 mt-5">
             <input type="text" class="form-control ip-group" id="search" placeholder="Pesquise ONG ou Fornecedor..."
@@ -103,6 +104,8 @@
                 </svg>
             </span>
         </div>
+
+
         <div class="accordion ip-group mb-5" id="accordionPanelsStayOpenExample">
             <div class="accordion-item">
                 <h2 class="accordion-header">
@@ -113,14 +116,37 @@
                         <span class="name p-3">Maria Silva - Fornecedor</span>
                     </button>
                 </h2>
+
+                
                 <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
                     <div class="accordion-body">
                         <div class="table-responsive">
                             <table class="table table-striped table-bordless mt-3" id="table">
+                                <caption>Lista de Dados de Contato</caption>
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Site</th>
+                                        <th scope="col">Telefone</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>maria@mail.com</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordless mt-3" id="table">
+                                <caption>Lista de Alimentos</caption>
                                 <thead class="table-dark">
                                     <tr>
                                         <th scope="col">Alimento</th>
                                         <th scope="col">Quantidade</th>
+                                        <th scope="col">Data de Validade</th>
                                         <th scope="col">Observações</th>
                                     </tr>
                                 </thead>
@@ -128,11 +154,13 @@
                                     <tr>
                                         <td>Arroz</td>
                                         <td>10 kg</td>
+                                        <td>10/10/24</td>
                                         <td>-</td>
                                     </tr>
                                     <tr>
                                         <td>Feijão</td>
                                         <td>6 Kg</td>
+                                        <td>10/10/24</td>
                                         <td>Alguma observação sobre feijão.</td>
                                     </tr>
                                 </tbody>
@@ -154,6 +182,7 @@
                     <div class="accordion-body">
                         <div class="table-responsive">
                             <table class="table table-striped table-bordless mt-3" id="table">
+                                <caption>Lista de Dados de Contato</caption>
                                 <thead class="table-dark">
                                     <tr>
                                         <th scope="col">Email</th>
@@ -172,10 +201,12 @@
                         </div>
                         <div class="table-responsive">
                             <table class="table table-striped table-bordless mt-3" id="table">
+                                <caption>Lista de Alimentos</caption>
                                 <thead class="table-dark">
                                     <tr>
                                         <th scope="col">Alimento</th>
                                         <th scope="col">Quantidade</th>
+                                        <th scope="col">Data de Validade</th>
                                         <th scope="col">Observações</th>
                                     </tr>
                                 </thead>
@@ -183,11 +214,13 @@
                                     <tr>
                                         <td>Arroz</td>
                                         <td>10 kg</td>
+                                        <td>12/10/24</td>
                                         <td>-</td>
                                     </tr>
                                     <tr>
                                         <td>Feijão</td>
                                         <td>6 Kg</td>
+                                        <td>12/10/24</td>
                                         <td>Alguma observação sobre feijão.</td>
                                     </tr>
                                 </tbody>
@@ -209,10 +242,31 @@
                     <div class="accordion-body">
                         <div class="table-responsive">
                             <table class="table table-striped table-bordless mt-3" id="table">
+                                <caption>Lista de Dados de Contato</caption>
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Site</th>
+                                        <th scope="col">Telefone</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>gil@mail.com</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordless mt-3" id="table">
+                                <caption>Lista de Alimentos</caption>
                                 <thead class="table-dark">
                                     <tr>
                                         <th scope="col">Alimento</th>
                                         <th scope="col">Quantidade</th>
+                                        <th scope="col">Data de Validade</th>
                                         <th scope="col">Observações</th>
                                     </tr>
                                 </thead>
@@ -220,11 +274,13 @@
                                     <tr>
                                         <td>Arroz</td>
                                         <td>10 kg</td>
+                                        <td>25/12/23</td>
                                         <td>-</td>
                                     </tr>
                                     <tr>
                                         <td>Feijão</td>
                                         <td>6 Kg</td>
+                                        <td>25/12/23</td>
                                         <td>Alguma observação sobre feijão.</td>
                                     </tr>
                                 </tbody>

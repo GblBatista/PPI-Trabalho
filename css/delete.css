@@ -12,4 +12,14 @@ footer {
     margin: auto;
     justify-self: center;
     justify-content: center;
+    width: 70%;
+}
+
+@media screen AND (max-width: 1200px){
+    .prosseguir{
+        margin: auto;
+        justify-self: center;
+        justify-content: center;
+        width: 100%;
+    }
 }
