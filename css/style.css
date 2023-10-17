@@ -49,11 +49,11 @@ footer {
     margin-top: 5%;
     bottom: 0;
     width: 100%;
-    text-align: center;
 }
 
 p {
-    color: black;
+       position: relative;
+ color: black;
     text-align: justify;
 }
 

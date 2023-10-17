@@ -1,3 +1,6 @@
+body{
+    overflow-wrap: normal;
+}
 
 #tel, #site, #lb-site, #lb-tel{
     display: none;
