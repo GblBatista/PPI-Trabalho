@@ -26,3 +26,20 @@ function(event) {
     }
     event.preventDefault();
 });
+
+
+const campoTelefone = document.getElementById('tel');
+
+campoTelefone.addEventListener('input', function() {
+    let valorCampo = campoTelefone.value;
+    valorCampo = valorCampo.replace(/\D/g, '');
+
+    const length = valorCampo.length;
+
+    if (length <= 10) {
+        valorCampo = valorCampo.replace(/^(\d{2})(\d{4})(\d{4})/, '($1) $2-$3');
+    } else {
+        valorCampo = valorCampo.replace(/^(\d{2})(\d{5})(\d{4}).*/, '($1) $2-$3');
+    }
+    campoTelefone.value = valorCampo;
+});
