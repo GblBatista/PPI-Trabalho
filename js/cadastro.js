@@ -27,7 +27,6 @@ function(event) {
     event.preventDefault();
 });
 
-
 const campoTelefone = document.getElementById('tel');
 
 campoTelefone.addEventListener('input', function() {
