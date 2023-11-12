@@ -80,25 +80,9 @@
         background-color: white;
         padding: 2%;
         border-radius: 5px;
+        height: 100%;
         padding-bottom: 12%;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-
-    }
-
-    footer{
-        position: fixed;
-    }
-}
-
-@media screen AND (max-width: 1439px){
-    .p-style{
-        margin: auto;
-        background-color: white;
-        padding: 2%;
-        border-radius: 5px;
-        padding-bottom: 12%;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-        text-overflow: clip;
     }
 
     footer{

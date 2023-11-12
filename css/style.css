@@ -49,11 +49,11 @@ footer {
     margin-top: 5%;
     bottom: 0;
     width: 100%;
+    text-align: center;
 }
 
 p {
-       position: relative;
- color: black;
+    color: black;
     text-align: justify;
 }
 
@@ -75,10 +75,6 @@ footer p {
 }
 
 @media screen AND (max-width: 1023px) {
-
-    *{
-        font-size: 1.35rem;
-    }
     body {
         font-size: 1.4rem;
     }
